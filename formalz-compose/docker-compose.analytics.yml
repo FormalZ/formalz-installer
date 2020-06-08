@@ -1,0 +1,36 @@
+version: '3.7'
+
+networks:
+  rage_default:
+    external: true
+
+services:
+  gameserver:
+    environment:
+      # Analytics config
+      - FORMALZ_ANALYTICS_ENABLED=true
+      - FORMALZ_ANALYTICS_SERVER_HOST=a2
+      - FORMALZ_ANALYTICS_SERVER_PORT=3000
+      - FORMALZ_ANALYTICS_SERVER_SECURE=false
+    networks:
+      default:
+        aliases:
+          - formalz-gameserver
+      rage_default:
+        aliases:
+          - formalz-gameserver
+  backend:
+    environment:
+      # Analytics config
+      - FORMALZ_ANALYTICS_ENABLED=true
+      - FORMALZ_ANALYTICS_BASE_URL=http://analytics.external.test:3000/
+      - FORMALZ_ANALYTICS_API_BASE_URL=http://a2:3000/
+      - FORMALZ_ANALYTICS_ADMIN_USERNAME=formalz-admin-test
+      - FORMALZ_ANALYTICS_ADMIN_PASSWORD=admintest123456
+    networks:
+      default:
+        aliases:
+          - formalz-backend
+      rage_default:
+        aliases:
+          - formalz-backend

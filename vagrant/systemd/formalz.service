@@ -1,0 +1,18 @@
+[Unit]
+Description=FormalZ starter
+After=docker.service network-online.target
+Requires=docker.service network-online.target
+
+[Service]
+WorkingDirectory=/home/vagrant/formalz
+Type=oneshot
+RemainAfterExit=yes
+
+ExecStart=/home/vagrant/formalz/formalz.sh start
+
+ExecStop=/home/vagrant/formalz/formalz.sh stop
+
+ExecReload=/home/vagrant/formalz/formalz.sh restart
+
+[Install]
+WantedBy=multi-user.target

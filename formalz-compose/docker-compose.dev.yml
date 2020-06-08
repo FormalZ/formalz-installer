@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  backend:
+    environment:
+      - FORMALZ_APP_DEBUG=false
+      - FORMALZ_APP_LOG_LEVEL=info
+
+  nginx:
+    volumes:
+      - ./data/nginx/conf-extra.d:/etc/nginx/conf-extra.d
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.9.4
+    container_name: formalz-phpmyadmin
+    hostname: phpmyadmin
+    environment:
+      PMA_HOST: "db"
+      PMA_ABSOLUTE_URI: "http://localhost:8080/phpmyadmin/"
+#      PMA_ARBITRARY: 1
