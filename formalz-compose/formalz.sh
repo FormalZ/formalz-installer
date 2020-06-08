@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COMPOSE_FILES="-f docker-compose.yml -f docker-compose.mail.yml"
+COMPOSE_FILES="-f docker-compose.yml -f docker-compose.analytics.yml"
 
 function usage() {
 cat 1>&2 << EOF
