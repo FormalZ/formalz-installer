@@ -52,7 +52,7 @@ With the *simple* installation you require to have at least the following dedica
 
 With the *full* (with analytics) installation you require to have at least the following dedicated resources:
  * 20 GB free HDD space
- * 4 GB of RAM
+ * 6 GB of RAM
  * 3 CPUs @ 2.2 GHz
 
 # Patreons
