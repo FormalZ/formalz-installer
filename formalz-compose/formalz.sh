@@ -64,7 +64,7 @@ function main() {
             rm -fr ./data/mysql/*
             ;;
         "--help")
-            help ;;
+            usage ;;
         *) echo \
             "  Usage: $0 [OPERATION | --help]" \
             && echo "   ('$1' is NOT a valid operation)'"
