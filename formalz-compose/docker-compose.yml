@@ -36,7 +36,7 @@ services:
     hostname: formalz-fchecker
 
   gameserver:
-    image: eucm/formalz-gameserver:1.0.1
+    image: eucm/formalz-gameserver:1.0.2
     container_name: formalz-gameserver
     restart: unless-stopped
     depends_on:
