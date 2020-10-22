@@ -8,7 +8,7 @@ services:
 
   nginx:
     volumes:
-      - ./data/nginx/conf-extra.d:/etc/nginx/conf-extra.d
+      - ./data/nginx/conf-extra.d_dev:/etc/nginx/conf-extra.d
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:4.9.4
