@@ -8,10 +8,10 @@ services:
 
   nginx:
     volumes:
-      - ./data/nginx/conf-extra.d_dev:/etc/nginx/conf-extra.d
+      - ./data/nginx/conf-extra.d_dev/phpmyadmin.conf:/etc/nginx/conf-extra.d/phpmyadmin.conf
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:4.9.4
+    image: phpmyadmin/phpmyadmin:5.0.4
     container_name: formalz-phpmyadmin
     hostname: phpmyadmin
     environment:
