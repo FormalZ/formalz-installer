@@ -58,7 +58,7 @@ services:
     hostname: formalz-gameserver
 
   backend:
-    image: eucm/formalz-backend:1.0.3
+    image: eucm/formalz-backend:1.0.4
     container_name: formalz-backend
     restart: unless-stopped
     depends_on:
