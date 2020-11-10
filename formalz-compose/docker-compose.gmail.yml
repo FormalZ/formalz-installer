@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  mail:
+    image: boky/postfix:latest
+    container_name: "mail"
+    environment:
+      ALLOW_EMPTY_SENDER_DOMAINS: "true"
+      RELAYHOST: "[smtp.gmail.com]:587"
+      RELAYHOST_USERNAME: "${RELAYHOST_USERNAME}"
+      RELAYHOST_TLS_LEVEL: "encrypt"
+      XOAUTH2_CLIENT_ID: "${XOAUTH2_CLIENT_ID}"
+      XOAUTH2_SECRET: "${XOAUTH2_SECRET}"
+      XOAUTH2_INITIAL_ACCESS_TOKEN: "${XOAUTH2_INITIAL_ACCESS_TOKEN}"
+      XOAUTH2_INITIAL_REFRESH_TOKEN: "${XOAUTH2_INITIAL_REFRESH_TOKEN}"
+      XOAUTH2_SYSLOG_ON_FAILURE: "no"
+      XOAUTH2_FULL_TRACE: "no"
+    hostname: mail

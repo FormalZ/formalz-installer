@@ -18,3 +18,6 @@ services:
       PMA_HOST: "db"
       PMA_ABSOLUTE_URI: "http://localhost:8080/phpmyadmin/"
 #      PMA_ARBITRARY: 1
+  mail:
+    ports:
+    - 8025:80

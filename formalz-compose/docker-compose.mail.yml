@@ -8,5 +8,3 @@ services:
       - MAILDEV_SMTP_PORT=25
       - MAILDEV_WEB_PORT=80
     hostname: mail
-    ports:
-      - 8025:80

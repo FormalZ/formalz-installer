@@ -36,7 +36,7 @@ services:
     hostname: formalz-fchecker
 
   gameserver:
-    image: eucm/formalz-gameserver:1.0.2
+    image: eucm/formalz-gameserver:1.1.0
     container_name: formalz-gameserver
     restart: unless-stopped
     depends_on:
@@ -58,7 +58,7 @@ services:
     hostname: formalz-gameserver
 
   backend:
-    image: eucm/formalz-backend:1.0.4
+    image: eucm/formalz-backend:1.1.0
     container_name: formalz-backend
     restart: unless-stopped
     depends_on:
@@ -79,6 +79,7 @@ services:
       - FORMALZ_DB_DATABASE=formalz
       - FORMALZ_DB_USERNAME=admin
       - FORMALZ_DB_PASSWORD=admin
+      - FORMALZ_DB_JDBC_URL=jdbc:mariadb://db/formalz?useSSL=false
       # Mail config
       - FORMALZ_MAIL_DRIVER=smtp
       - FORMALZ_MAIL_HOST=mail
